@@ -14,6 +14,7 @@
 		18D0D8F42C68E21C00AAC9A1 /* DailyPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0D8F32C68E21C00AAC9A1 /* DailyPracticeTests.swift */; };
 		18D0D8FE2C68E21C00AAC9A1 /* DailyPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0D8FD2C68E21C00AAC9A1 /* DailyPracticeUITests.swift */; };
 		18D0D9002C68E21C00AAC9A1 /* DailyPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0D8FF2C68E21C00AAC9A1 /* DailyPracticeUITestsLaunchTests.swift */; };
+		18D0D90D2C6908DA00AAC9A1 /* ContentUnavailableSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0D90C2C6908DA00AAC9A1 /* ContentUnavailableSample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		18D0D8F92C68E21C00AAC9A1 /* DailyPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D0D8FD2C68E21C00AAC9A1 /* DailyPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPracticeUITests.swift; sourceTree = "<group>"; };
 		18D0D8FF2C68E21C00AAC9A1 /* DailyPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		18D0D90C2C6908DA00AAC9A1 /* ContentUnavailableSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUnavailableSample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				18D0D8E22C68E21A00AAC9A1 /* DailyPracticeApp.swift */,
 				18D0D8E42C68E21A00AAC9A1 /* ContentView.swift */,
+				18D0D90C2C6908DA00AAC9A1 /* ContentUnavailableSample.swift */,
 				18D0D8E62C68E21C00AAC9A1 /* Assets.xcassets */,
 				18D0D8E82C68E21C00AAC9A1 /* Preview Content */,
 			);
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D0D8E52C68E21A00AAC9A1 /* ContentView.swift in Sources */,
+				18D0D90D2C6908DA00AAC9A1 /* ContentUnavailableSample.swift in Sources */,
 				18D0D8E32C68E21A00AAC9A1 /* DailyPracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
