@@ -140,6 +140,7 @@
 				18D0D8DB2C68E21A00AAC9A1 /* Sources */,
 				18D0D8DC2C68E21A00AAC9A1 /* Frameworks */,
 				18D0D8DD2C68E21A00AAC9A1 /* Resources */,
+				18D0D9102C69ABAF00AAC9A1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -254,6 +255,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18D0D9102C69ABAF00AAC9A1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which mint >/dev/null; then\n  xcrun --sdk macosx mint run swiftlint swiftlint --fix\n  xcrun --sdk macosx mint run swiftlint swiftlint\nelse\n  echo \"warning: Mint not installed, download from https://github.com/yonaskolb/Mint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18D0D8DB2C68E21A00AAC9A1 /* Sources */ = {
@@ -428,6 +449,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DailyPractice/Preview Content\"";
 				DEVELOPMENT_TEAM = D2U85G9H4F;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -457,6 +479,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DailyPractice/Preview Content\"";
 				DEVELOPMENT_TEAM = D2U85G9H4F;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
