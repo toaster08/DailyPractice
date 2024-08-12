@@ -5,15 +5,14 @@
 //  Created by 山田　天星 on 2024/08/11.
 //
 
-
-import Foundation
 import Combine
+import Foundation
 import SwiftUI
 
 struct Contact: Identifiable {
     let id: UUID
     let name: String
-    
+
     init(id: UUID = UUID(), name: String) {
         self.id = id
         self.name = name
@@ -23,12 +22,12 @@ struct Contact: Identifiable {
 class ContactsViewModel: ObservableObject {
     @Published var contacts: [Contact] = []
     @Published var searchText: String = ""
-    
+
     var searchResults: [Contact] {
         if searchText.isEmpty {
-            return contacts
+            contacts
         } else {
-            return contacts.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+            contacts.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
         }
     }
 
@@ -37,14 +36,14 @@ class ContactsViewModel: ObservableObject {
             Contact(name: "John Doe"),
             Contact(name: "Jane Smith"),
             Contact(name: "Alice Johnson"),
-            Contact(name: "Bob Brown")
+            Contact(name: "Bob Brown"),
         ]
     }
 }
 
 struct ContactsView: View {
     let contact: Contact
-    
+
     var body: some View {
         VStack {
             Text(contact.name)
@@ -79,5 +78,5 @@ struct ContentUnavailableSampleView: View {
                 }
             }
         }
-   }
+    }
 }
