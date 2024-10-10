@@ -16,6 +16,12 @@ struct ContentView: View {
                 } label: {
                     Text("ContentUnavailableSample")
                 }
+
+                NavigationLink {
+                    FooTabView()
+                } label: {
+                    Text("FooTabView")
+                }
             }
             .navigationTitle("Contacts")
         }
