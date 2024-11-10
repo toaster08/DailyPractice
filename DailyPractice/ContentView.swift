@@ -22,6 +22,12 @@ struct ContentView: View {
                 } label: {
                     Text("StickyTabView")
                 }
+
+                NavigationLink {
+                    ShareCelebrationView(todoTitle: "Your Task Title")
+                } label: {
+                    Text("ShareCelebrationView")
+                }
             }
             .navigationTitle("Contacts")
         }

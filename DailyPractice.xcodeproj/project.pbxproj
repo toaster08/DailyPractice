@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18C4126C2CB825BE008A9577 /* StickyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C4126B2CB825BE008A9577 /* StickyTabView.swift */; };
 		18D0D8E32C68E21A00AAC9A1 /* DailyPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0D8E22C68E21A00AAC9A1 /* DailyPracticeApp.swift */; };
 		18D0D8E52C68E21A00AAC9A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0D8E42C68E21A00AAC9A1 /* ContentView.swift */; };
 		18D0D8E72C68E21C00AAC9A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D0D8E62C68E21C00AAC9A1 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 		18D0D8FE2C68E21C00AAC9A1 /* DailyPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0D8FD2C68E21C00AAC9A1 /* DailyPracticeUITests.swift */; };
 		18D0D9002C68E21C00AAC9A1 /* DailyPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0D8FF2C68E21C00AAC9A1 /* DailyPracticeUITestsLaunchTests.swift */; };
 		18D0D90D2C6908DA00AAC9A1 /* ContentUnavailableSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0D90C2C6908DA00AAC9A1 /* ContentUnavailableSample.swift */; };
+		18F1FC762CE0831F00FA3430 /* ShareCelebrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1FC752CE0831F00FA3430 /* ShareCelebrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18C4126B2CB825BE008A9577 /* StickyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyTabView.swift; sourceTree = "<group>"; };
 		18D0D8DF2C68E21A00AAC9A1 /* DailyPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D0D8E22C68E21A00AAC9A1 /* DailyPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPracticeApp.swift; sourceTree = "<group>"; };
 		18D0D8E42C68E21A00AAC9A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		18D0D8FD2C68E21C00AAC9A1 /* DailyPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPracticeUITests.swift; sourceTree = "<group>"; };
 		18D0D8FF2C68E21C00AAC9A1 /* DailyPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		18D0D90C2C6908DA00AAC9A1 /* ContentUnavailableSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUnavailableSample.swift; sourceTree = "<group>"; };
+		18F1FC752CE0831F00FA3430 /* ShareCelebrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCelebrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 				18D0D8E22C68E21A00AAC9A1 /* DailyPracticeApp.swift */,
 				18D0D8E42C68E21A00AAC9A1 /* ContentView.swift */,
 				18D0D90C2C6908DA00AAC9A1 /* ContentUnavailableSample.swift */,
+				18C4126B2CB825BE008A9577 /* StickyTabView.swift */,
+				18F1FC752CE0831F00FA3430 /* ShareCelebrationView.swift */,
 				18D0D8E62C68E21C00AAC9A1 /* Assets.xcassets */,
 				18D0D8E82C68E21C00AAC9A1 /* Preview Content */,
 			);
@@ -195,7 +201,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					18D0D8DE2C68E21A00AAC9A1 = {
 						CreatedOnToolsVersion = 15.4;
@@ -281,9 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18F1FC762CE0831F00FA3430 /* ShareCelebrationView.swift in Sources */,
 				18D0D8E52C68E21A00AAC9A1 /* ContentView.swift in Sources */,
 				18D0D90D2C6908DA00AAC9A1 /* ContentUnavailableSample.swift in Sources */,
 				18D0D8E32C68E21A00AAC9A1 /* DailyPracticeApp.swift in Sources */,
+				18C4126C2CB825BE008A9577 /* StickyTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +510,6 @@
 		18D0D9072C68E21C00AAC9A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -522,7 +529,6 @@
 		18D0D9082C68E21C00AAC9A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -542,7 +548,6 @@
 		18D0D90A2C68E21C00AAC9A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D2U85G9H4F;
@@ -560,7 +565,6 @@
 		18D0D90B2C68E21C00AAC9A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D2U85G9H4F;
