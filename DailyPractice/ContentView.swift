@@ -18,9 +18,9 @@ struct ContentView: View {
                 }
 
                 NavigationLink {
-                    FooTabView()
+                    StickyTabView()
                 } label: {
-                    Text("FooTabView")
+                    Text("StickyTabView")
                 }
             }
             .navigationTitle("Contacts")

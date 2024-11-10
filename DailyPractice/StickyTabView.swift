@@ -1,26 +1,11 @@
-//
-//  StickyTabView.swift
-//  DailyPractice
-//
-//  Created by 山田　天星 on 2024/10/11.
-//
-
 import SwiftUI
-
-struct StickyTabView: View {
-    var body: some View {
-        HStack {
-            Text("test")
-        }
-    }
-}
 
 enum TabType: String, CaseIterable, Hashable {
     case recipe
     case menu
 }
 
-struct FooTabView: View {
+struct StickyTabView: View {
     @State var selection: TabType = .menu
     @State private var offset: CGFloat = .zero
 
@@ -50,7 +35,7 @@ struct FooTabView: View {
     }
 
     private func updateOffset(_ newOffset: CGFloat) { // ②
-        if newOffset <= -topAreaHeight { // HostingControllerを使わない場合、ここにsafeAreaを高さを足す必要がある。
+        if newOffset <= -topAreaHeight {
             offset = -topAreaHeight
         } else if newOffset >= 0.0 {
             offset = 0
@@ -214,5 +199,5 @@ public struct OffsetReadableVerticalScrollView<Content: View>: View {
 }
 
 #Preview {
-    FooTabView()
+    StickyTabView()
 }
