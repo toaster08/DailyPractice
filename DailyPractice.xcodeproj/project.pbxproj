@@ -16,7 +16,7 @@
 		18D0D8FE2C68E21C00AAC9A1 /* DailyPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0D8FD2C68E21C00AAC9A1 /* DailyPracticeUITests.swift */; };
 		18D0D9002C68E21C00AAC9A1 /* DailyPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0D8FF2C68E21C00AAC9A1 /* DailyPracticeUITestsLaunchTests.swift */; };
 		18D0D90D2C6908DA00AAC9A1 /* ContentUnavailableSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0D90C2C6908DA00AAC9A1 /* ContentUnavailableSample.swift */; };
-		18F1FC762CE0831F00FA3430 /* ShareCelebrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1FC752CE0831F00FA3430 /* ShareCelebrationView.swift */; };
+		18F1FC762CE0831F00FA3430 /* CapturableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F1FC752CE0831F00FA3430 /* CapturableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,7 @@
 		18D0D8FD2C68E21C00AAC9A1 /* DailyPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPracticeUITests.swift; sourceTree = "<group>"; };
 		18D0D8FF2C68E21C00AAC9A1 /* DailyPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		18D0D90C2C6908DA00AAC9A1 /* ContentUnavailableSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentUnavailableSample.swift; sourceTree = "<group>"; };
-		18F1FC752CE0831F00FA3430 /* ShareCelebrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCelebrationView.swift; sourceTree = "<group>"; };
+		18F1FC752CE0831F00FA3430 /* CapturableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +100,11 @@
 		18D0D8E12C68E21A00AAC9A1 /* DailyPractice */ = {
 			isa = PBXGroup;
 			children = (
+				18F1FC752CE0831F00FA3430 /* CapturableView.swift */,
 				18D0D8E22C68E21A00AAC9A1 /* DailyPracticeApp.swift */,
 				18D0D8E42C68E21A00AAC9A1 /* ContentView.swift */,
 				18D0D90C2C6908DA00AAC9A1 /* ContentUnavailableSample.swift */,
 				18C4126B2CB825BE008A9577 /* StickyTabView.swift */,
-				18F1FC752CE0831F00FA3430 /* ShareCelebrationView.swift */,
 				18D0D8E62C68E21C00AAC9A1 /* Assets.xcassets */,
 				18D0D8E82C68E21C00AAC9A1 /* Preview Content */,
 			);
@@ -146,7 +146,6 @@
 				18D0D8DB2C68E21A00AAC9A1 /* Sources */,
 				18D0D8DC2C68E21A00AAC9A1 /* Frameworks */,
 				18D0D8DD2C68E21A00AAC9A1 /* Resources */,
-				18D0D9102C69ABAF00AAC9A1 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -262,32 +261,12 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		18D0D9102C69ABAF00AAC9A1 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which mint >/dev/null; then\n  xcrun --sdk macosx mint run swiftlint swiftlint --fix\n  xcrun --sdk macosx mint run swiftlint swiftlint\n  xcrun --sdk macosx mint run swiftformat --swiftversion 5.9 .\nelse\n  echo \"warning: Mint not installed, download from https://github.com/yonaskolb/Mint\"\nfi\n\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		18D0D8DB2C68E21A00AAC9A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18F1FC762CE0831F00FA3430 /* ShareCelebrationView.swift in Sources */,
+				18F1FC762CE0831F00FA3430 /* CapturableView.swift in Sources */,
 				18D0D8E52C68E21A00AAC9A1 /* ContentView.swift in Sources */,
 				18D0D90D2C6908DA00AAC9A1 /* ContentUnavailableSample.swift in Sources */,
 				18D0D8E32C68E21A00AAC9A1 /* DailyPracticeApp.swift in Sources */,
@@ -459,6 +438,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -489,6 +469,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyPractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

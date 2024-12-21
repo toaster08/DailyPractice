@@ -24,9 +24,9 @@ struct ContentView: View {
                 }
 
                 NavigationLink {
-                    ShareCelebrationView(todoTitle: "Your Task Title")
+                    CaptureContentView()
                 } label: {
-                    Text("ShareCelebrationView")
+                    Text("CaptureContentView")
                 }
             }
             .navigationTitle("Contacts")
