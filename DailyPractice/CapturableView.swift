@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIKit
+import Photos
 
 struct PrizeView: View {
     var body: some View {
@@ -123,7 +124,14 @@ struct CaptureContentView: View {
                 
                 VStack(spacing: 24) {
                     Button {
-                        ImageSaver($shouldShowCompletionDialog).writeToPhotoAlbum(image: image)
+//                        ImageSaver($shouldShowCompletionDialog).writeToPhotoAlbum(image: image)
+                        Task {
+                            do {
+                                try await PhotoLibraryHelper().saveImageToPhotoLibrary(image: image)
+                            } catch {
+                                print("error")
+                            }
+                        }
                     } label: {
                         Text("カメラロールに保存する")
                             .foregroundColor(.white)
@@ -158,6 +166,60 @@ struct CaptureContentView: View {
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, 36)
             }
+        }
+    }
+}
+
+import Photos
+
+class PhotoLibraryHelper {
+    enum PhotoLibraryErrorCode: Int {
+        case accessDenied = 1
+        case accessRestricted = 2
+        case accessUndetermined = 3
+        case unknownError = 4
+    }
+
+    func saveImageToPhotoLibrary(image: UIImage) async throws {
+        let status = await PHPhotoLibrary.requestAuthorization(for: .addOnly)
+        guard status == .authorized else {
+            throw self.authorizationError(for: status)
+        }
+
+        return try await withCheckedThrowingContinuation { continuation in
+            PHPhotoLibrary.shared().performChanges({
+                let creationRequest = PHAssetChangeRequest.creationRequestForAsset(from: image)
+                creationRequest.creationDate = Date()
+            }, completionHandler: { success, error in
+                if let error = error {
+                    continuation.resume(throwing: error)
+                } else if success {
+                    print("写真を保存しました")
+                    continuation.resume()
+                } else {
+                    continuation.resume(throwing: NSError(domain: "PhotoLibrarySaveError", code: 4, userInfo: [
+                        NSLocalizedDescriptionKey: "画像の保存に失敗しました。"
+                    ]))
+                }
+            })
+        }
+    }
+
+    // 権限に応じたエラーを生成
+    func authorizationError(for status: PHAuthorizationStatus) -> Error {
+        switch status {
+        case .denied:
+            return NSError(domain: "PhotoLibraryAccessError",
+                           code: PhotoLibraryErrorCode.accessDenied.rawValue,
+                           userInfo: [NSLocalizedDescriptionKey: "写真ライブラリへのアクセスが拒否されています。"])
+        case .restricted:
+            return NSError(domain: "PhotoLibraryAccessError",
+                           code: PhotoLibraryErrorCode.accessRestricted.rawValue,
+                           userInfo: [NSLocalizedDescriptionKey: "写真ライブラリへのアクセスが制限されています。"])
+        default:
+            return NSError(domain: "PhotoLibraryAccessError",
+                           code: PhotoLibraryErrorCode.unknownError.rawValue,
+                           userInfo: [NSLocalizedDescriptionKey: "未知のエラーが発生しました。"])
         }
     }
 }
